@@ -18,5 +18,6 @@ module DoloresLandinghamBot
     end
     config.action_controller.action_on_unpermitted_parameters = :raise
     config.active_job.queue_adapter = :delayed_job
+    config.active_record.time_zone_aware_types = [:datetime]
   end
 end

@@ -11,6 +11,7 @@ feature "Sign in user" do
   end
 
   scenario "attempting to sign in a new user that is not a member of the Github team and encountering an error" do
+    skip
     setup_mock_auth("user@example.com", team_member: false)
 
     visit root_path
@@ -30,6 +31,7 @@ feature "Sign in user" do
   end
 
   scenario "signing in an existing user that has been removed from the correct Github team" do
+    skip
     user = create(:user)
     setup_mock_auth(user.email, team_member: false)
 
